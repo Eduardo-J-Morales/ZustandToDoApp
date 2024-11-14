@@ -4,6 +4,7 @@ import { Button } from '../components/ui/button'
 import { Input } from '../components/ui/input'
 import { Checkbox } from '../components/ui/checkbox'
 import { Trash, Edit } from 'lucide-react'
+
 type Todo = {
   id: number
   text: string
@@ -12,12 +13,13 @@ type Todo = {
 
 type TodoStore = {
   todos: Todo[]
+  addTodo: (text: string) => void
+  toggleTodo: (id: number) => void
+  updateTodo: (id: number) => void
+  deleteTodo: (id: number) => void
 }
 
-type TodoStore = {
-  todos: Todo[]
-  addTodo: (text: string) => void
-}
+
 
 export default function Home() {
   return (
