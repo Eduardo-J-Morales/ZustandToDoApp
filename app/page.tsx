@@ -1,3 +1,5 @@
+"use client"
+
 import { create } from 'zustand'
 import { useState } from 'react'
 import { Button } from '../components/ui/button'
@@ -50,6 +52,8 @@ export default function Home() {
   const [editText, setEditText] = useState('')
 
   return (
-  
+    <div className="max-w-md mx-auto mt-10 mb-6 text-center">
+      <h1>Todo App</h1>
+    </div>
   );
 }
