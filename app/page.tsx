@@ -80,7 +80,23 @@ export default function Home() {
         </div>
       </form>
       <ul className="">
-        
+        {todos.map((todo) => (
+          <li key={todo.id}>
+            <Checkbox/>
+
+            {editingId === todo.id ? (
+              <Input
+              type="text"
+              value={editText}
+              onChange={(e) => setEditText(e.target.value)}
+              onBlur={() => handleUpdate(todo.id)}
+              onKeyUp={(e) => e.key == 'Enter' &&}
+              />
+            ) : (
+
+            )}
+          </li>
+        ))}
       </ul>
     </div>
   );
