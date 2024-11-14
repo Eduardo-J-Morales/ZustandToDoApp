@@ -19,6 +19,11 @@ type TodoStore = {
   deleteTodo: (id: number) => void
 }
 
+const useTodoStore = create<TodoStore>((set) => ({
+  todos: [],
+  
+}))
+
 
 
 export default function Home() {
