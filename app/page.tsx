@@ -52,8 +52,13 @@ export default function Home() {
   const [editText, setEditText] = useState('')
 
   return (
-    <div className="max-w-md mx-auto mt-10 mb-6 text-center">
-      <h1>Todo App</h1>
+    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-xl">
+      <h1 className="text-2xl font-bold mb-6 text-center">Todo App</h1>
+      <form className=""></form>
+        <div className="">
+
+        
+        </div>
     </div>
   );
 }
