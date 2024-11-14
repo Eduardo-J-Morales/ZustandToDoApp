@@ -43,8 +43,10 @@ const useTodoStore = create<TodoStore>((set) => ({
 
 
 export default function Home() {
+  const { todos, addTodo, toggleTodo, updateTodo, deleteTodo } = useTodoStore()
+
   
   return (
-  <></>
+  
   );
 }
