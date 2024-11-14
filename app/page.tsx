@@ -28,7 +28,7 @@ const useTodoStore = create<TodoStore>((set) => ({
   })),
 
   toggleTodo: (id) => set((state) => ({
-    todos: state.todos.map((todo) => todo.id === id ? { ...todo, completed: !todo.completed })
+    todos: state.todos.map((todo) => todo.id === id ? { ...todo, completed: !todo.completed }: todo)
   })),
 
   updateTodo: (id, text) => set((state) => ({
@@ -43,6 +43,7 @@ const useTodoStore = create<TodoStore>((set) => ({
 
 
 export default function Home() {
+  
   return (
   <></>
   );
