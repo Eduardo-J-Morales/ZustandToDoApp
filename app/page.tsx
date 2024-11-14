@@ -68,7 +68,7 @@ export default function Home() {
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-xl">
       <h1 className="text-2xl font-bold mb-6 text-center">Todo App</h1>
       <form onSubmit={handleSubmit} className="mb-4">
-        <div>
+        <div className="flex gap-2">
           <Input
           type="text"
           value={newTodo}
@@ -79,6 +79,9 @@ export default function Home() {
           <Button variant="default" type='submit'>Add</Button>
         </div>
       </form>
+      <ul className="">
+        
+      </ul>
     </div>
   );
 }
