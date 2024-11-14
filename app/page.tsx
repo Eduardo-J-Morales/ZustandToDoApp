@@ -20,7 +20,7 @@ type TodoStore = {
 }
 
 const useTodoStore = create<TodoStore>((set) => ({
-  todos: [],
+  todos: []
   
 }))
 
