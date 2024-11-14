@@ -3,11 +3,15 @@ import { useState } from 'react'
 import { Button } from '../components/ui/button'
 import { Input } from '../components/ui/input'
 import { Checkbox } from '../components/ui/checkbox'
-
+import { Trash, Edit } from 'lucide-react'
 type Todo = {
   id: number
   text: string
   completed: boolean
+}
+
+type TodoStore = {
+  todos: Todo[]
 }
 
 type TodoStore = {
@@ -17,6 +21,6 @@ type TodoStore = {
 
 export default function Home() {
   return (
-  
+  <></>
   );
 }
