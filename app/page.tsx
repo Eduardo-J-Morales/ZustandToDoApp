@@ -48,15 +48,24 @@ export default function Home() {
 
   const { todos, addTodo, toggleTodo, updateTodo, deleteTodo } = useTodoStore()
   const [newTodo, setNewTodo] = useState('')
-  const [editingId, segEditingId] = useState<number | null>(null)
+  const [editingId, setEditingId] = useState<number | null>(null)
   const [editText, setEditText] = useState('')
+
+  const handleEdit = (id: number, text: string) => {
+    setEditingId(id)
+    setEditText(text)
+  }
 
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-xl">
       <h1 className="text-2xl font-bold mb-6 text-center">Todo App</h1>
       <form className=""></form>
         <div className="">
-
+          <Input
+          type="text"
+          value={newTodo}
+          onChange={((e) => setNewTodo(e.target.value))}
+          />
         
         </div>
     </div>
