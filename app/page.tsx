@@ -20,7 +20,11 @@ type TodoStore = {
 }
 
 const useTodoStore = create<TodoStore>((set) => ({
-  todos: []
+  todos: [],
+  
+  addTodo: (text) => set((state) => ({
+    todo: [...state.todos, { id: Date.now(), text, completed: false }]
+  }))
   
 }))
 
