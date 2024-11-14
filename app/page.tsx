@@ -4,6 +4,7 @@ import { Button } from '../components/ui/button'
 import { Input } from '../components/ui/input'
 import { Checkbox } from '../components/ui/checkbox'
 import { Trash, Edit } from 'lucide-react'
+import { todo } from 'node:test'
 
 type Todo = {
   id: number
@@ -15,7 +16,7 @@ type TodoStore = {
   todos: Todo[]
   addTodo: (text: string) => void
   toggleTodo: (id: number) => void
-  updateTodo: (id: number) => void
+  updateTodo: (id: number, text: string) => void
   deleteTodo: (id: number) => void
 }
 
@@ -24,14 +25,18 @@ const useTodoStore = create<TodoStore>((set) => ({
 
   addTodo: (text) => set((state) => ({
     todos: [...state.todos, { id: Date.now(), text, completed: false }]
-  }))
+  })),
 
   toggleTodo: (id) => set((state) => ({
     todos: state.todos.map((todo) => todo.id === id ? { ...todo, completed: !todo.completed })
-  }))
+  })),
 
   updateTodo: (id, text) => set((state) => ({
-    todos: state.todos.map((todo) => todo.id === id ? { ...todo, text })
+    todos: state.todos.map((todo) => todo.id === id ? { ...todo, text } : todo)
+  })),
+
+  deleteTodo: (id) => set((state) => ({
+    todos: state.todos.filter((todo) todo.id !== id)
   }))
 }))
 
