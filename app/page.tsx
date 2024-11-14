@@ -36,7 +36,7 @@ const useTodoStore = create<TodoStore>((set) => ({
   })),
 
   deleteTodo: (id) => set((state) => ({
-    todos: state.todos.filter((todo) todo.id !== id)
+    todos: state.todos.filter((todo) => todo.id !== id)
   }))
 }))
 
