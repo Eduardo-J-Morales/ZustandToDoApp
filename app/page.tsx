@@ -1,7 +1,7 @@
 "use client"
 
 import { create } from 'zustand'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Button } from '../components/ui/button'
 import { Input } from '../components/ui/input'
 import { Checkbox } from '../components/ui/checkbox'
@@ -51,6 +51,14 @@ export default function Home() {
   const [editingId, setEditingId] = useState<number | null>(null)
   const [editText, setEditText] = useState('')
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (newTodo.trim()) {
+      addTodo(newTodo)
+      setNewTodo('')
+    }
+  }
+
   const handleEdit = (id: number, text: string) => {
     setEditingId(id)
     setEditText(text)
@@ -59,15 +67,18 @@ export default function Home() {
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-xl">
       <h1 className="text-2xl font-bold mb-6 text-center">Todo App</h1>
-      <form className=""></form>
-        <div className="">
+      <form onSubmit={handleSubmit} className="mb-4">
+        <div>
           <Input
           type="text"
           value={newTodo}
-          onChange={((e) => setNewTodo(e.target.value))}
+          onChange={(e) => setNewTodo(e.target.value)}
+          placeholder="Add a new todo"
+          className='flex-grow'
           />
-        
+          <Button variant="default" type='submit'>Add</Button>
         </div>
+      </form>
     </div>
   );
 }
