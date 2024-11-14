@@ -46,6 +46,7 @@ export default function Home() {
 
   const { todos, addTodo, toggleTodo, updateTodo, deleteTodo } = useTodoStore()
   const [newTodo, setNewTodo] = useState('')
+  const [editingId, segEditingId] = useState<number | null>(null)
   
 
   return (
