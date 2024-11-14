@@ -10,6 +10,10 @@ type Todo = {
   completed: boolean
 }
 
+type TodoStore = {
+  todos: Todo[]
+  addTodo: (text: string) => void
+}
 
 export default function Home() {
   return (
