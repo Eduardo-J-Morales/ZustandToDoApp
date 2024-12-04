@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<body> 
+  
+  <h1>ZustandToDoApp</h1> 
+  
+  <p>A simple To-Do application built using Zustand for state management.</p>
+  
+  <h2>Table of Contents</h2> 
+  
+  <ul> 
+    <li><a href="#about">About</a></li> 
+    <li><a href="#features">Features</a></li> 
+    <li><a href="#installation">Installation</a></li> 
+    <li><a href="#usage">Usage</a></li> 
+    <li><a href="#contributing">Contributing</a></li> 
+    <li><a href="#license">License</a></li> 
+  </ul> 
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  <h2 id="about">About</h2> 
+  
+  <p>This project is a simple To-Do application that demonstrates the use of Zustand for state management in a React application. It includes basic CRUD operations for managing to-do items.</p> 
+  
+  <h2 id="features">Features</h2> 
+  
+  <ul>   
+    <li>Add new to-do items</li> 
+    <li>Edit existing to-do items</li> 
+    <li>Delete to-do items</li> 
+    <li>Mark to-do items as completed</li>
+  </ul> 
+  
+  <h2 id="installation">Installation</h2> 
+  
+  <pre><code> git clone https://github.com/Eduardo-J-Morales/ZustandToDoApp.git cd ZustandToDoApp npm install </code></pre> 
+  
+  <h2 id="usage">Usage</h2> 
+  <pre><code> npm start </code></pre> 
+  
+  <p>Open your browser and navigate to <a href="http://localhost:3000">http://localhost:3000</a> to see the application in action.</p> 
+  
+  <h2 id="contributing">Contributing</h2> 
+  <p>Contributions are welcome! Please fork this repository and submit a pull request with your changes.</p> 
+  
+  <h2 id="license">License</h2> 
+  
+  <p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p> 
+  
+  </body>
